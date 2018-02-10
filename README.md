@@ -27,8 +27,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 # Hosted here:
+NB: Firebase & GitHub Pages host 'static' web sites (or applications). Put simply this means no server-side code like PHP or .net  
+
 ### <a target="_blank" rel="noopener" href="https://pdtemplateanos5.firebaseapp.com/">FireBase</a> 
-Firebase is the easiest to get running: redeploys on each production build (see script below)
+Firebase (really oriented to mobile apps) is the easiest hosting to get running and it has a free tier  
+The project redeploys on each production build (see script below)
  
 ##### Install firebase tools globally
    > npm install -g firebase-tools
@@ -80,8 +83,9 @@ Firebase is the easiest to get running: redeploys on each production build (see 
    > npm run deploy
 
  ###  <a target="_blank" rel="noopener" href="https://github.com/RussellRClark/Angular">GitHub Pages</a>
-  This requires more steps.  
-  
+  GitHub and GitHub Pages require more steps than firebase because the code is held in a repository.  
+  A free tier is offered for public repositories  
+ 
   Create a GitHub account.   
   Create a repo.  
   Set this repo as your dev project git remote. Commit & push  
@@ -94,6 +98,6 @@ Firebase is the easiest to get running: redeploys on each production build (see 
   > git commit -message=[message]  
   > git push.... as required
 
-   ### <a target="_blank" rel="noopener" href="https://github.com/RussellRClark/Angular.git">GitHub Repo</a>
+   ### <a target="_blank" rel="noopener" href="https://github.com/RussellRClark/Angular.git">GitHub</a>
    Public repo. The code is here
 
