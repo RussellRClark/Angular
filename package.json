@@ -4,13 +4,14 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
+    "start": "ng serve -o",
+    "build": "ng build --prod --output-path dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy-firebase": "ng build --prod && firebase deploy && firebase open hosting:site",
-    "deploy-githubpages": "ng build --prod --output-path docs --base-href Angular"
+    "deploy-firebase": "ng build --prod --output-path dist && firebase deploy && firebase open hosting:site",
+    "deploy-githubpages": "ng build --prod --output-path docs --base-href Angular",
+    "after deploy-githubpages do gitadd commit & push": ""
   },
   "private": true,
   "dependencies": {
