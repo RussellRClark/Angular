@@ -33,7 +33,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-# Hosted here:
+# Hosted projects:
+## Semi-Automated Deployment
 NB: Firebase & GitHub Pages host 'static' web sites (or applications). Put simply this means no server-side code like PHP or .net  
 
 ### <a target="_blank" rel="noopener" href="https://pdtemplateanos5.firebaseapp.com/">FireBase</a> 
@@ -102,8 +103,8 @@ The project redeploys on each production build (see script below)
    
   Then 
   > git add .  // note the space and dot  
-  > git commit -message=[message]  
-  > git push.... as required
+  > git commit -message=["message"]  
+  > git push -u origin master
 
    ### <a target="_blank" rel="noopener" href="https://github.com/RussellRClark/Angular.git">GitHub</a>
    Public repo. The code is here
