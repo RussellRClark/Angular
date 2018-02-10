@@ -89,7 +89,7 @@ The project redeploys on each production build (see script below)
    
    > npm run deploy
 
- ###  <a target="_blank" rel="noopener" href="https://github.com/RussellRClark/Angular">GitHub Pages</a>
+ ###  <a target="_blank" rel="noopener" href="https://russellrclark.github.io/Angular/">GitHub Pages</a>
   GitHub and GitHub Pages require more steps than firebase because the code is held in a repository.  
   A free tier is offered for public repositories  
  
