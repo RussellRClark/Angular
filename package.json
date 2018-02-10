@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod && firebase deploy && firebase open hosting:site"
+    "deploy-firebase": "ng build --prod && firebase deploy && firebase open hosting:site",
+    "deploy-githubpages": "ng build --prod --output-path docs --base-href Angular"
   },
   "private": true,
   "dependencies": {
