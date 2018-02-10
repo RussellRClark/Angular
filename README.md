@@ -85,7 +85,7 @@ The project redeploys on each production build (see script below)
    
  ##### package.json
    Add this to scripts  
-   "deploy": "ng build --prod && firebase deploy && firebase open hosting:site"
+   "deploy": "ng build --prod --output-path dist && firebase deploy && firebase open hosting:site"
    
    > npm run deploy
 
@@ -96,7 +96,7 @@ The project redeploys on each production build (see script below)
   Create a GitHub account.   
   Create a repo.  
   Set this repo as your dev project git remote. Commit & push  
-  In GitHub go to the repo/Settings/GitHub Pages & Set a source (master branch/docs folder)  
+  In GitHub go to the repo/Settings/GitHub Pages/Set a source (master branch/docs folder)  
   
    > ng build --prod --output-path docs --base-href [your repo name]
    
