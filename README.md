@@ -1,6 +1,13 @@
 # PDTemplateANOS5
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.  
+Some additions have/will be made to demonstrate Testing, Continuous Integration & Continuous Deployment.  
+
+##### Last Update
+10 Feb 2017  
+
+##### Contact
+russell.clark@peeringdown.cloud  
 
 ## Development server
 
