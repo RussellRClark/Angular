@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-#Hosted here:
+# Hosted here:
 ### <a target="_blank" rel="noopener" href="https://pdtemplateanos5.firebaseapp.com/">FireBase</a> 
 Firebase is the easiest to get running: redeploys on each production build (see script below)
  
@@ -81,6 +81,7 @@ Firebase is the easiest to get running: redeploys on each production build (see 
 
  ###  <a target="_blank" rel="noopener" href="https://github.com/RussellRClark/Angular">GitHub Pages</a>
   This requires more steps.  
+  
   Create a GitHub account.   
   Create a repo.  
   Set this repo as your dev project git remote. Commit & push  
@@ -94,5 +95,5 @@ Firebase is the easiest to get running: redeploys on each production build (see 
   > git push.... as required
 
    ### <a target="_blank" rel="noopener" href="https://github.com/RussellRClark/Angular.git">GitHub Repo</a>
-   Public repo here
+   Public repo. The code is here
 
