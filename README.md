@@ -35,11 +35,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Hosted projects:
 ## Semi-Automated Deployment
-NB: Firebase & GitHub Pages host 'static' web sites (or applications). Put simply this means no server-side code like PHP or .net  
+Firebase & GitHub Pages host 'static' web sites (or applications). Put simply this means no server-side code like PHP or .net  
 
 ### <a target="_blank" rel="noopener" href="https://pdtemplateanos5.firebaseapp.com/">FireBase</a> 
-Firebase (really oriented to mobile apps) is the easiest hosting to get running and it has a free tier  
-The project redeploys on each production build (see script below)
+Firebase is the easiest hosting to get running and it has a free tier  
+The project redeploys on each production build (see script below). Tests are run manually.
  
 ##### Install firebase tools globally
    > npm install -g firebase-tools
@@ -80,9 +80,12 @@ The project redeploys on each production build (see script below)
    }}  
    
 ##### Then
-   > ng build --prod
+   > ng build --prod --output-path dist
    > firebase deploy
-   > firebase open hosting:site
+   > firebase open hosting:site  
+   
+   Specifying the output path is required because the same code is deployed to GitHub (see below) which  
+   deploys from the repository docs folder
    
  ##### package.json
    Add this to scripts  
@@ -92,7 +95,7 @@ The project redeploys on each production build (see script below)
 
  ###  <a target="_blank" rel="noopener" href="https://russellrclark.github.io/Angular/">GitHub Pages</a>
   GitHub and GitHub Pages require more steps than firebase because the code is held in a repository.  
-  A free tier is offered for public repositories  
+  A free tier is offered for public repositories. GitHub offers Pipelines & Services.  
  
   Create a GitHub account.   
   Create a repo.  

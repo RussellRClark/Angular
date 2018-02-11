@@ -13,15 +13,15 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-  it(`should have as title 'PDTemplateANOS5'`, async(() => {
+  it(`should have as title 'Russells Angular Demo'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('PDTemplateANOS5');
+    expect(app.title).toEqual('Russells Angular Demo');
   }));
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('PDTemplateANOS5 - Hosted on: Firebase and GitHub Pages');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Russells Angular Demo of Semi-Automated Deployment Hosted on Firebase and GitHub Pages');
   }));
 });
