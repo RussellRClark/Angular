@@ -9,9 +9,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy-firebase": "ng build --prod --output-path dist && firebase deploy && firebase open hosting:site",
+    "deploy-firebase-prod": "ng build --prod --output-path dist && firebase use prod && firebase deploy && firebase open hosting:site",
+    "deploy-firebase-dev": "ng build --prod --output-path dist && firebase use dev && firebase deploy && firebase open hosting:site",
     "deploy-githubpages": "ng build --prod --output-path docs --base-href Angular",
-    "after deploy-githubpages do gitadd commit & push": ""
+    "after deploy-githubpages do git add . commit & push": ""
   },
   "private": true,
   "dependencies": {

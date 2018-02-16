@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "pdtemplateanos5"
+    "default": "pdtemplateanos5",
+    "prod": "pdtemplateanos5",
+    "dev": "pdtemplateanos5"
   }
 }
