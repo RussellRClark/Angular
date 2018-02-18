@@ -10,53 +10,51 @@
 <h2>Continuous Deployment</h2>
 Code is deployed on Push to the repository or manually from the development terminal
 <br>Tests are deployed manually from the development terminal
-<h3>Code here</h3>
 <ul>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/RussellRClark/Angular.git">GitHub</a></h2>
+    <h2><a target="_blank" rel="noopener" href="https://github.com/RussellRClark/Angular.git">Code Repository: GitHub</a></h2>
     The code hosted in this (free) public repo is deployed to GitHub Pages and FireBase.
     See the ReadMe in the repository for more details.
   </li>
-</ul>
-<h3>Deployments here</h3>
-<ul>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://pdtemplateanos5.firebaseapp.com/">FireBase</a></h2>
+    <h2><a target="_blank" rel="noopener" href="https://pdtemplateanos5.firebaseapp.com/">Host: FireBase</a></h2>
     Firebase is the easiest hosting to get running and it has a free tier.
     The project redeploys from the dist folder on each production build .
     Tests are run manually in development.
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://russellrclark.github.io/Angular/">GitHub Pages</a></h2>
+    <h2><a target="_blank" rel="noopener" href="https://russellrclark.github.io/Angular/">Host: GitHub Pages</a></h2>
     GitHub and GitHub Pages require more installation &amp; deployment steps than FireBase because the code is held in a repository.
     From development a build step and a git commit step are required. Tests are run manually in development.
     GitHub offers a free tier (used here) and Pipelines & Services which are not used here.
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://www.peeringdown.cloud">Netlify</a></h2>
+    <h2><a target="_blank" rel="noopener" href="https://www.peeringdown.cloud">Host: Netlify</a></h2>
     Like Firebase, Netlify has a free tier, is easy to install &amp; deploy from the command line. Note the use of the _redirects file for SPA applications.
     Continuous Deployment is also available on Git push by linking to a GITHub repository &amp; specifying a build command. Tests are run manually in development.
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://pdtemplateanos5.herokuapp.com//">Host: Heroku</a></h2>
+    Heroku offers a free tier with Continuous Deployment &amp; CI & CD via its pipelines. Heroku requires a few code changes as it uses Node.js to run the site.
+    See the ReadMe in the repository for more details.
   </li>
 </ul>
 
 
 <br><h2>Continuous Integration &amp; Deployment</h2>
+<h3>NB: this is not yet working</h3>
 <ul>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://gitlab.com/RussellClark/PDTemplateANOS5_GitLab">GitLab</a></h2>
+    <h2><a target="_blank" rel="noopener" href="https://gitlab.com/RussellClark/PDTemplateANOS5_GitLab">Code Repository: GitLab</a></h2>
     The code hosted in this (free) public repo is deployed to a FireBase development site  &amp; a FireBase production site.
     GitLab runs the Unit Tests, Integration Tests &amp; the e2e (end-to-end) UI tests; and then deploys the code.
     See the ReadMe in the repository for more details.
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://pdtemplateanos5.firebaseapp.com/">FireBase</a></h2>
+    <h2><a target="_blank" rel="noopener" href="https://pdtemplateanos5.firebaseapp.com/">Host: FireBase</a></h2>
   This is the production site deployed from GitLab. The development site is not shown.
   </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://pdtemplateanos5.herokuapp.com//">Heroku</a></h2>
-    Heroku offers a free tier with Continuous Deployment &amp; CI & CD via its pipelines. Heroku requires a few code changes as it uses Node.js to run the site.
-    See the ReadMe in the repository for more details.
-  </li>
+
 </ul>
 
 <br><h2>Here are some links if you are not familiar with Angular</h2>
