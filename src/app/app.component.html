@@ -1,10 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }} of Semi-Automated Deployment Hosted on Firebase, GitHub Pages, Heroku &amp; Netlify
+    Welcome to {{ title }} of Continuous Integration &amp; Continuous Deployment.
   </h1>
   <h3> This app is based on the standard Angular-cli template. More test code will be added later.</h3>
- <br> <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<img width="150" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
 
 <h2>Continuous Deployment</h2>
@@ -14,29 +14,30 @@ Code is deployed on Push to the repository or manually from the development term
   <li>
     <h2><a target="_blank" rel="noopener" href="https://github.com/RussellRClark/Angular.git">Code Repository: GitHub</a></h2>
     The code hosted in this (free) public repo is deployed to GitHub Pages, Heroku, Netlife and FireBase.
-    See the ReadMe in the repository for more details.
+    <br>  See the ReadMe in the repository for more details.
   </li>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://pdtemplateanos5.firebaseapp.com/">Host: FireBase</a></h2>
     Firebase is the easiest hosting to get running and it has a free tier.
-    The project redeploys from the dist folder on each production build .
-    Tests are run manually in development.
+    <br>  The project redeploys from the dist folder on each production build .
+    <br>  Tests are run manually in development.
   </li>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://russellrclark.github.io/Angular/">Host: GitHub Pages</a></h2>
     GitHub and GitHub Pages require more installation &amp; deployment steps than FireBase because the code is held in a repository.
-    From development a build step and a git commit step are required. Tests are run manually in development.
-    GitHub offers a free tier (used here) and Pipelines & Services which are not used here.
+    <br>   From development a build step and a git commit step are required. Tests are run manually in development.
+    <br>   GitHub offers a free tier (used here) and Pipelines & Services which are not used here.
   </li>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://www.peeringdown.cloud">Host: Netlify</a></h2>
     Like Firebase, Netlify has a free tier, is easy to install &amp; deploy from the command line. Note the use of the _redirects file for SPA applications.
-    Continuous Deployment is also available on Git push by linking to a GITHub repository &amp; specifying a build command. Tests are run manually in development.
+    <br>   Continuous Deployment is also available on Git push by linking to a GITHub repository &amp; specifying a build command. Tests are run manually in development.
+    <br> I have redirected one of my domains to this site, both HTTP &amp; HTTPS following Netlify's simple, clear instructions.
   </li>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://pdtemplateanos5.herokuapp.com//">Host: Heroku</a></h2>
     Heroku offers a free tier with Continuous Deployment &amp; CI & CD via its pipelines. Heroku requires a few code changes as it uses Node.js to run the site.
-    See the ReadMe in the repository for more details.
+    <br> See the ReadMe in the repository for more details.
   </li>
 </ul>
 
@@ -47,8 +48,8 @@ Code is deployed on Push to the repository or manually from the development term
   <li>
     <h2><a target="_blank" rel="noopener" href="https://gitlab.com/RussellClark/PDTemplateANOS5_GitLab">Code Repository: GitLab</a></h2>
     The code hosted in this (free) public repo is deployed to a FireBase development site  &amp; a FireBase production site.
-    GitLab runs the Unit Tests, Integration Tests &amp; the e2e (end-to-end) UI tests; and then deploys the code.
-    See the ReadMe in the repository for more details.
+    <br> GitLab runs the Unit Tests, Integration Tests &amp; the e2e (end-to-end) UI tests; and then deploys the code.
+    <br> See the ReadMe in the repository for more details.
   </li>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://pdtemplateanos5.firebaseapp.com/">Host: FireBase</a></h2>
@@ -57,6 +58,26 @@ Code is deployed on Push to the repository or manually from the development term
 
 </ul>
 
+<br><h2>Here are the links to the services mentioned above</h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://github.com/">GitHub</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://about.gitlab.com/">GitLab</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://firebase.google.com/">Firebase</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://www.netlify.com/">Netlify</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://www.heroku.com/home">Heroku</a></h2>
+  </li>
+
+
+</ul>
 <br><h2>Here are some links if you are not familiar with Angular</h2>
 <ul>
   <li>
@@ -68,9 +89,17 @@ Code is deployed on Push to the repository or manually from the development term
   <li>
     <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">Angular-cli Documentation</a></h2>
   </li>
-
 </ul>
 
-<h4>Contact: russell.clark@when-red.com</h4>
-<h4>Last Updated: 10 Feb 2018</h4>
-
+<br><h2>Just some more stuff</h2>
+<ul>
+  <li>
+    <h2>Contact: russell.clark@when-red.com</h2>
+  </li>
+  <li>
+    <h2>Last Updated: 18 Feb 2018</h2>
+  </li>
+  <li>
+    <h2>ToDo: Look a Heroku Pipelines, get GitLab to work</h2>
+  </li>
+</ul>
