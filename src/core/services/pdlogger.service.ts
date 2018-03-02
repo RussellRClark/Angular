@@ -4,7 +4,7 @@ import 'rxjs/add/operator/catch';
 
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {isPlatformBrowser} from '@angular/common';
-import {IPDServerLogger} from './ipdserverlogger';
+import {PDServerLogger} from './logging/serverloggers/ipdserverlogger';
 
 export class LoggerConfig {
   level: PDLoggerLevel;
@@ -32,9 +32,13 @@ export class PDLoggerService {
   private _serverLogLevel: PDLoggerLevel;
   private _clientLogLevel: PDLoggerLevel;
   private _isIE: boolean;
-  private _serverLogger: IPDServerLogger;
+  private _serverLogger: PDServerLogger;
 
-  constructor(private http: HttpClient, @Inject(PLATFORM_ID) private platformId, @Optional() private options: LoggerConfig, serverLogger: IPDServerLogger) {
+  constructor(private http: HttpClient,
+              @Inject(PLATFORM_ID) private platformId,
+              @Optional() private options: LoggerConfig,
+              serverLogger: PDServerLogger) {
+
     if (!this.options) {
       this.options = {
         level: PDLoggerLevel.OFF,

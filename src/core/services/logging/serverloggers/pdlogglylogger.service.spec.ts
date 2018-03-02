@@ -8,7 +8,10 @@ describe('PDLogglyLoggerService', () => {
     });
   });
 
-  it('should be created', inject([PDLogglyLoggerService], (service: PDLogglyLoggerService) => {
-    expect(service).toBeTruthy();
+  it('should be created',
+    inject([PDLogglyLoggerService],
+      (service: PDLogglyLoggerService) => {
+
+        expect(service).toBeTruthy();
   }));
 });

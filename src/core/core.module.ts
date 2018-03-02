@@ -1,16 +1,25 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PDLoggerService } from './services/pdlogger.service';
-import { PDErrorHandlerService } from './services/pdexception-handler.service';
-import { PDHttpLoggerService } from './services/pdhttplogger.service';
+import { PDErrorHandlerService } from './services/errors/pdexception-handler.service';
+import { PDHttpLoggerService } from './services/logging/serverloggers/pdhttplogger.service';
+import { PDLogglyLoggerService} from './services/logging/serverloggers/pdlogglylogger.service';
+import { PDStateService} from './services/state/pdstate.service';
+import { PDStateService2} from './services/state/pdstate2.service';
+import { PDServerLogger} from './services/logging/serverloggers/ipdserverlogger';
+import { HttpModule} from '@angular/http';
 
 @NgModule({
   providers: [
-      PDLoggerService,
+    {provide: PDLoggerService, useClass: PDLoggerService},
       PDErrorHandlerService,
-      PDHttpLoggerService
+      PDHttpLoggerService,
+      PDStateService,
+      PDStateService2,
+      {provide: PDServerLogger, useClass: PDHttpLoggerService}
   ],
   imports: [
+    HttpModule,
   ]
 })
 

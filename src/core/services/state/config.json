@@ -1,0 +1,8 @@
+{
+  "apiServerURL": "../tsconfig.json",
+  "dbServerURL": "../tsconfig.json",
+  "logging": {
+    "httpURL": "../out-tsc/app",
+    "logglyID": "./"
+  }
+}
