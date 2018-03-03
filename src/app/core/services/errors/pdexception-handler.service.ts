@@ -1,5 +1,5 @@
 import {ErrorHandler, Injectable, Inject} from '@angular/core';
-import {PDLoggerService} from '../pdlogger.service';
+import {PDLoggerService} from '../logging/pdlogger.service';
 
 // how do we disply the error to the user??
 // an alert (horrid), a toast?? better & easier

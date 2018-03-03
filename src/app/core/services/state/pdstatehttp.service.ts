@@ -1,16 +1,17 @@
 import {Injectable} from '@angular/core';
 import { ConfigModel } from '../../models/config.model';
 import {HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
+import { PDStateService} from './pdstateinterface';
 import 'rxjs/add/operator/map';
 
 // if i try tio inject thisinti app.component all hell breaks loose - but with httplogger.
 // no idea why
 
-
 @Injectable()
-export class PDStateService {
+export class PDStateHttpService extends PDStateService {
 
   constructor(private _http: HttpClient) {
+    super();
   }
 
   public configData: ConfigModel;
@@ -22,7 +23,7 @@ export class PDStateService {
   ];
 
   myData() {
-    return 'This is my data, man!';
+    return 'http: This is my data, man!';
   }
 
   myURL() {
@@ -36,10 +37,11 @@ export class PDStateService {
   // its a demo of both error handling and reading files
   // base url needed if API is not somewhere else(!!). BasURL removed - testing issues
 
-  getData () {
+  getConfiguration () {
+    console.log('in state');
     this.baseURL = 'baseurl';
     let url: string;
-    url = '/config.json';
+    url = 'assets/data/config.json';
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     this._http.get(url, {responseType: 'json'}).subscribe((data: ConfigModel) => {
@@ -57,11 +59,11 @@ export class PDStateService {
 
   processError (error) {
     let url: string;
-    url = '../../assets/data/config.json';
+    url = 'assets/data/config.json';
 
     this._http.get(url)
       .subscribe((data) => {this.configData = data as ConfigModel; },
-          error2 => console.log('get file error: ' + error2),
+          error2 => console.log('get file error: ',  error2),
         () => console.log('got file')
       );
   }

@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { PDErrorHandlerService } from './pdexception-handler.service';
-import {PDLoggerService} from '../pdlogger.service';
+import {PDLoggerService} from '../logging/pdlogger.service';
 import {HttpClient, HttpHandler} from '@angular/common/http';
 import {PDServerLogger} from '../logging/serverloggers/ipdserverlogger';
 

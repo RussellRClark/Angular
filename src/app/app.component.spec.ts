@@ -1,7 +1,9 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { PDStateService2} from '../core/services/state/pdstate2.service';
-import { Http, ConnectionBackend, HttpModule } from '@angular/http';
+import { PDStateMockService} from './core/services/state/pdstatemock.service';
+import {PDStateService} from './core/services/state/pdstateinterface';
+import { PDState2MockService} from './core/services/state/pdstate2mock.service';
+import {PDState2Service} from './core/services/state/pdstate2interface';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -10,10 +12,10 @@ describe('AppComponent', () => {
         AppComponent
       ],
       imports: [
-        HttpModule
       ],
       providers: [
-        PDStateService2, Http, ConnectionBackend
+        {provide: PDStateService, useClass: PDStateMockService},
+        {provide: PDState2Service, useClass: PDState2MockService}
       ],
     }).compileComponents();
   }));

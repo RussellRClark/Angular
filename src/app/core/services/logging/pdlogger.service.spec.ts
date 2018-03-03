@@ -2,8 +2,8 @@ import { TestBed, inject } from '@angular/core/testing';
 import {LoggerConfig, PDLoggerService} from './pdlogger.service';
 import {Optional, PLATFORM_ID} from '@angular/core';
 import {HttpClient, HttpHandler} from '@angular/common/http';
-import {PDServerLogger} from './logging/serverloggers/ipdserverlogger';
-import {PDHttpLoggerService} from './logging/serverloggers/pdhttplogger.service';
+import {PDServerLogger} from './serverloggers/ipdserverlogger';
+import {PDHttpLoggerService} from './serverloggers/pdhttplogger.service';
 
 describe('PDloggerService', () => {
   beforeEach(() => {

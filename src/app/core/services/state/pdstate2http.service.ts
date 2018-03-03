@@ -2,11 +2,13 @@ import {Injectable} from '@angular/core';
 import { ConfigModel } from '../../models/config.model';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+import {PDState2Service} from './pdstate2interface';
 
 @Injectable()
-export class PDStateService2 {
+export class PDState2HttpService extends PDState2Service {
 
   constructor(private _http: Http) {
+    super();
   }
 
   public configData: ConfigModel;
@@ -18,7 +20,7 @@ export class PDStateService2 {
   ];
 
   myData() {
-    return 'This is my data, man!';
+    return 'http2: This is my data, man!';
   }
 
   myURL() {
@@ -32,20 +34,20 @@ export class PDStateService2 {
   // its a demo of both error handling and reading files
   // base url needed if API is not somewhere else(!!). BasURL removed - testing issues
 
-  getData () {
+  getConfiguration () {
     this.baseURL = 'http://localhost/';
     let url: string;
     url = 'api/SampleData/WeatherForecasts';
 
     this._http.get(url).subscribe(result => {
       this.configData = result.json() as ConfigModel;
-      console.log('state2 config: ' + result.json());
+      console.log('state2 config: ', result.json());
     }, error => this.processError());
   }
 
   processError () {
     let url: string;
-    url = '../../assets/data/config.json';
+    url = 'assets/data/config.json';
     console.log('config2 getting local data');
     this._http.get(url)
       .map((data) => {
@@ -53,8 +55,8 @@ export class PDStateService2 {
       })
       .subscribe((success) => {
         this.configData = success;
-        console.log('config2 local data: ' + this.configData.logging.httpURL);
-      }, error2 =>   console.log('config2 error: ' + error2));
+        console.log('config2 local data: ', this.configData.logging.httpURL);
+      }, error2 =>   console.log('config2 error: ', error2));
   }
 }
 

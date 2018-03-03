@@ -4,7 +4,7 @@ import 'rxjs/add/operator/catch';
 
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {isPlatformBrowser} from '@angular/common';
-import {PDServerLogger} from './logging/serverloggers/ipdserverlogger';
+import {PDServerLogger} from './serverloggers/ipdserverlogger';
 
 export class LoggerConfig {
   level: PDLoggerLevel;
