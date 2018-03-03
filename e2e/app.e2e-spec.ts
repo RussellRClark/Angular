@@ -9,6 +9,6 @@ describe('pdtemplate-anos5 App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to Russells Angular Demo of Semi-Automated Deployment Hosted on Firebase and GitHub Pages');
+    expect(page.getParagraphText()).toEqual('Welcome to Russells Angular Demo of Continuous Integration & Continuous Deployment.');
   });
 });

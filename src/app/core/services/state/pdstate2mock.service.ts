@@ -15,7 +15,7 @@ export class PDState2MockService extends PDState2Service {
 
   // for demo
   cars = [
-    'Ford', 'Chevrolet', 'Buick'
+    'Mock2', 'Ford', 'Chevrolet', 'Buick'
   ];
 
   myData() {
@@ -23,6 +23,7 @@ export class PDState2MockService extends PDState2Service {
   }
 
   myURL() {
+    this.baseURL = 'mock2';
     return this.baseURL;
   }
 

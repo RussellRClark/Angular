@@ -16,7 +16,7 @@ export class PDState2HttpService extends PDState2Service {
 
   // for demo
   cars = [
-    'Ford', 'Chevrolet', 'Buick'
+    'http2', 'Ford', 'Chevrolet', 'Buick'
   ];
 
   myData() {
@@ -24,6 +24,7 @@ export class PDState2HttpService extends PDState2Service {
   }
 
   myURL() {
+    this.baseURL = 'http2';
     return this.baseURL;
   }
   // NB: baseURL is treated differently
