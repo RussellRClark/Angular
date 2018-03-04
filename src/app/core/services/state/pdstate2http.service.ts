@@ -56,7 +56,7 @@ export class PDState2HttpService extends PDState2Service {
       })
       .subscribe((success) => {
         this.configData = success;
-        console.log('config2 local data: ', this.configData.logging.httpURL);
+        console.log('config2 local data: ', this.configData);
       }, error2 =>   console.log('config2 error: ', error2));
   }
 }

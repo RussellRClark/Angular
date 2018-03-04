@@ -182,12 +182,4 @@ GitLab runs the Unit Tests, Integration Tests &amp; the e2e (end-to-end) UI test
 ###<a target="_blank" rel="noopener" href="https://pdtemplateanos5.firebaseapp.com/">Host: FireBase</a></h2>
   This is the production site deployed from GitLab. The development site is not shown.
   
-  
-2 March 2018
-There is an issue with pdstateservice. Inject it into app.component & httplogger fails.
-May be cannot use Http & Httpclient at same time. 
-May be that testing app.component & httplogger needs to MOCK HTTP/HTTP client
-May be HTTP/HTTPClient should be wrapped in my own interface/abstract class/service like the server loggers so they can be mocked
-Try putting PDStateService (httpclient) in PDTemplateANOS5-Gitlab & inject it into a componemt (not app? or does it matter)
-See evernote on HTTPClient - there is a separate testing section. Is there some funky stuff we are not doing
-
+ 

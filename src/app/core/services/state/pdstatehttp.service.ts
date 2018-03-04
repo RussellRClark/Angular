@@ -3,6 +3,8 @@ import { ConfigModel } from '../../models/config.model';
 import {HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
 import { PDStateService} from './pdstateinterface';
 import 'rxjs/add/operator/map';
+import {ErrorObservable} from 'rxjs/observable/ErrorObservable';
+import {catchError, retry} from 'rxjs/operators';
 
 // if i try tio inject thisinti app.component all hell breaks loose - but with httplogger.
 // no idea why
@@ -38,37 +40,52 @@ export class PDStateHttpService extends PDStateService {
   // its a demo of both error handling and reading files
   // base url needed if API is not somewhere else(!!). BasURL removed - testing issues
 
-  getConfiguration () {
-    console.log('in state');
-    this.baseURL = 'baseurl';
+  getConfiguration() {
     let url: string;
-    url = 'assets/data/config.json';
-    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    url = 'assets/data/config.json'; // change this to test the error handling
 
-    this._http.get(url, {responseType: 'json'}).subscribe((data: ConfigModel) => {
-        this.configData = data;
-      },
-        (err: HttpErrorResponse) => {
-          if (err.error instanceof Error) {
-            console.log('Client-side error occured.');
-          } else {
-            console.log('Server-side error occured.');
-          }
-        }
-    );
-  }
-
-  processError (error) {
-    let url: string;
-    url = 'assets/data/config.json';
-
-    this._http.get(url)
-      .subscribe((data) => {this.configData = data as ConfigModel; },
-          error2 => console.log('get file error: ',  error2),
-        () => console.log('got file')
+    return this._http.get<ConfigModel>(url, { observe: 'response'})
+      .pipe(
+        retry(3),
+        catchError(this.handleError)
       );
   }
-}
 
-// Notes
-// This is a singleton. Holds data needed across modules etc
+  getConfig() {
+    return this.getConfiguration()
+      .subscribe(
+        resp => {
+          const keys = resp.headers.keys();
+          console.log('state got response keys: ', keys);
+          this.configData = {... resp.body};
+          console.log('state got response body configData: ', this.configData);
+        },
+        error => this.handleError
+      );
+  }
+
+  handleError(error: HttpErrorResponse) {
+    console.log(`in error handler`);
+
+    if (error.error instanceof ErrorEvent) {
+
+      // A client-side or network error occurred. Handle it accordingly.
+      console.error('Client-side error', error.error.message);
+      console.error('  message:', error.error.message);
+    } else {
+
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong,
+      // perhaps we should make sure the body holds some useful info??
+      console.error( `Backend error`);
+      console.error( `  code: ${error.status} ${error.statusText}`);
+      console.error( `  body:`);
+      console.error( `  ${error.error}`);
+      console.error( `  message: ${error.message}`);
+      console.error( `  name: ${error.name}`);
+    }
+
+    // return an ErrorObservable with a user-facing error message
+    return new ErrorObservable( 'Something bad happened; please try again later.');
+  }
+}

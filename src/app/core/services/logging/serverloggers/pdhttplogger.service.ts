@@ -7,7 +7,6 @@ import {PDServerLogger} from './ipdserverlogger';
 import { PDStateService} from '../../state/pdstateinterface';
 import { PDState2Service} from '../../state/pdstate2interface';
 
-
 @Injectable()
 export class PDHttpLoggerService implements PDServerLogger {
 

@@ -1,4 +1,5 @@
 import { ConfigModel} from '../../models/config.model';
+import {HttpErrorResponse} from '@angular/common/http';
 
 export interface IPDStateService {
   configData: ConfigModel;
@@ -6,7 +7,9 @@ export interface IPDStateService {
   cars: any;
   myURL(): string;
   myData(): string;
-  getConfiguration(): void;
+  getConfiguration();
+  getConfig();
+  handleError(error: HttpErrorResponse);
 }
 
 export abstract class PDStateService implements IPDStateService {
@@ -15,5 +18,7 @@ export abstract class PDStateService implements IPDStateService {
   abstract cars: any;
   abstract myURL(): string;
   abstract myData(): string;
-  abstract getConfiguration(): void;
+  abstract getConfiguration();
+  abstract getConfig();
+  abstract handleError(error: HttpErrorResponse);
 }

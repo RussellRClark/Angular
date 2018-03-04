@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { PDStateService } from './pdstateinterface';
 import { ConfigModel } from '../../models/config.model';
+import {HttpErrorResponse} from '@angular/common/http';
+import {ErrorObservable} from 'rxjs/observable/ErrorObservable';
 
 @Injectable()
 export class PDStateMockService extends PDStateService {
@@ -26,6 +28,10 @@ export class PDStateMockService extends PDStateService {
     return this.baseURL;
   }
 
+  getConfig() {
+    this.getConfiguration();
+  }
+
   getConfiguration() {
     this.configData = {
       'apiServerURL': '../tsconfig.json',
@@ -35,5 +41,9 @@ export class PDStateMockService extends PDStateService {
         'logglyID': './'
       }
     };
+  }
+
+  handleError(error: HttpErrorResponse) {
+    return new ErrorObservable( 'Something bad happened; please try again later.');
   }
 }
