@@ -60,6 +60,3 @@ export class PDState2HttpService extends PDState2Service {
       }, error2 =>   console.log('config2 error: ', error2));
   }
 }
-
-// Notes
-// This is a singleton. Holds data needed across modules etc
